@@ -1,12 +1,5 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+from . import db
 from datetime import datetime, timezone
-
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///banco_py.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-db = SQLAlchemy(app)
 
 class Usuario(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -20,8 +13,7 @@ class Transacao(db.Model):
     usuario_id = db.Column(db.Integer, db.ForeignKey('usuario.id'))
     tipo = db.Column(db.String)
     valor = db.Column(db.Float)
-    data = db.Column(db.DateTime, default=datetime.now(timezone.utc)) #ver aqui
-
+    data = db.Column(db.DateTime, default=datetime.now(timezone.utc))
 
 # @app.route('/usuario/<user_id>', methods=['GET'])
 # def get_usuario(user_id):

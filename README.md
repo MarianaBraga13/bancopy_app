@@ -18,13 +18,13 @@ Resumo:
 
 Para esta versão, será primeiramente, realizada a conexão com o banco de dados para ser populado por uma automação, nas versões seguintes.
 
-- 👉 As versões seguintes preveem análise de crédito automatizada, utilizando modelos reais de IA e dados disponíveis compartilhados e/ou dados populados (dependendo do volume de dados que a automação conseguir popular).
+- 👉 As versões seguintes preveem análise de crédito através de modelos de IA, utilizando inicialmente o seed.py, de forma automatizada para popular o banco de dados.
 
 RESUMO DOS PRÓXIMOS PASSOS:
 *Reaproveitamento do backend de um projeto próprio (transacoes v6.0);
 *Conectar ao Banco de Dados
 *Inserir uma interface Web
-*Popular o Banco de Dados utilizando RPA (Robotic Process Automation)
+*Popular o Banco de Dados
 *Análise de dados
 *Análise de crédito em IA
 *Representação com dashboards
