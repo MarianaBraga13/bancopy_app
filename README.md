@@ -16,13 +16,17 @@ Resumo:
 
 - ✅ **v1.0**: Esta release busca aproveitar o código do projeto de CLI para desenvolver uma interface gráfica, utilizando Flask e Bootstrap, migrando os dados para o banco de dados SQLite, visto que era utilizado no projeto anterior, o JSON para as tarefas de persistência de dados e armazenamento.
 
-Para esta versão, será primeiramente, realizada a conexão com o banco de dados.
+Para esta versão, será primeiramente, realizada a conexão com o banco de dados para ser populado por uma automação, nas versões seguintes.
 
-- 👉 As versões seguintes preveem análise de crédito automatizada, utilizando modelos reais de IA e dados disponíveis compartilhados.
+- 👉 As versões seguintes preveem análise de crédito automatizada, utilizando modelos reais de IA e dados disponíveis compartilhados e/ou dados populados (dependendo do volume de dados que a automação conseguir popular).
 
-RESUMO DOS ÚLTIMOS PASSOS:
-*Reaproveitamento do backend de um projeto próprio;
+RESUMO DOS PRÓXIMOS PASSOS:
+*Reaproveitamento do backend de um projeto próprio (transacoes v6.0);
 *Conectar ao Banco de Dados
 *Inserir uma interface Web
+*Popular o Banco de Dados utilizando RPA (Robotic Process Automation)
+*Análise de dados
+*Análise de crédito em IA
+*Representação com dashboards
 
 Este sistema é a Versão 1.0.
