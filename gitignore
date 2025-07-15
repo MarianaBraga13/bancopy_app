@@ -1,2 +1,4 @@
-_pycache_
-venv
+venv/
+__pycache__/
+*.pyc
+banco_py.db
