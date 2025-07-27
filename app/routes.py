@@ -5,6 +5,9 @@ from datetime import datetime, timezone
 
 main = Blueprint('main', __name__)
 
+# importante lembrar que, numa arquitetura REST quanto a query é feita
+# a resposta para o user é salva temporariamente no jsonify
+
 @main.route('/usuario/<int:user_id>', methods=['GET'])
 def get_usuario(user_id):   
     user = Usuario.query.get(user_id)
@@ -19,5 +22,5 @@ def get_usuario(user_id):
     
     return jsonify({"error": "Usuário (a) não encontrado (a)"}), 404
     
-    
+# refazer tudo aqui de routes amanhã    
 
