@@ -6,7 +6,7 @@ Instruções:
 2. instale o requirements.txt no terminal como:
 pip install -r requirements.txt
 
-Então, é só rodar no main.py.
+Então, é só rodar no app.py.
 
 Importante:
 Esta versão é uma release do projeto de transacoes em CLI (Comand Line Interface).
@@ -14,19 +14,18 @@ Esta versão é uma release do projeto de transacoes em CLI (Comand Line Interfa
 Resumo:
 ## Histórico de versões
 
-- ✅ **v1.0**: Esta release busca aproveitar o código do projeto de CLI para desenvolver uma interface gráfica, utilizando Flask e Bootstrap, migrando os dados para o banco de dados SQLite, visto que era utilizado no projeto anterior, o JSON para as tarefas de persistência de dados e armazenamento.
+- ✅ **v1.0**: Esta release busca aproveitar o código do projeto de CLI para desenvolver uma interface gráfica utilizando Bootstrap, e o framework Flask (jinja), utilizando rotas com Blueprints, arquitetura estilo API REST (métodos GET, POST, DELETE), migrando os dados de JSON para o banco de dados SQLite (SQLALchemy), análise de dados e treinamento de modelos de Rregressão Linear como o scikit-learn (o treinamento será feito com ajustes visando a maior eficiência do modelo de ML)
 
-Para esta versão, será primeiramente, realizada a conexão com o banco de dados para ser populado por uma automação, nas versões seguintes.
-
-- 👉 As versões seguintes preveem análise de crédito através de modelos de IA, utilizando inicialmente o seed.py, de forma automatizada para popular o banco de dados.
+- 👉 As versões seguintes preveem análise de crédito através de modelos de IA, utilizando inicialmente o seed.py, de forma automatizada para popular o banco de dados. 
 
 RESUMO DOS PRÓXIMOS PASSOS:
-*Reaproveitamento do backend de um projeto próprio (transacoes v6.0);
-*Conectar ao Banco de Dados
-*Inserir uma interface Web
-*Popular o Banco de Dados
-*Análise de dados
-*Análise de crédito em IA
-*Representação com dashboards
+*Reaproveitamento do back-end de um projeto próprio em CLI (você poderá encontrá-lo no repositório: transacoes v6.0)
+*Conectar ao Banco de Dados com SQLALchemy (SQLite)
+*Inserir uma interface Web, Blueprint em rotas, métodos GET, POST, DELETE (API REST)
+*Popular o Banco de Dados usando seed.py
+*Segurança da Informação dos dados do cliente com @login_admin
+*Análise de dados usando Estatística Aplicada a Ciência de Dados (pandas)
+*Análise de crédito em IA (Regressão Linear | Naive Bayes)
+*Representação com dashboards usando matplotlib
 
 Este sistema é a Versão 1.0.
