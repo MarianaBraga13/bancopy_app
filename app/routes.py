@@ -6,11 +6,11 @@ from datetime import datetime, timezone
 main = Blueprint('main', __name__)
 
 # importante lembrar que, numa arquitetura REST quanto a query é feita
-# a resposta para o user é salva temporariamente no jsonify
+# a resposta para o user é formatada pelo jsonify
 
 @main.route('/usuario', methods=['POST'])
 def criar_usuario():
-    dados = request.get.jason() # Pega o json da requisição
+    dados = request.get_json() # Pega o json da requisição
     novo_usuario = Usuario(nome=dados['nome'])
     db.session.add(novo_usuario) # Prepara para salvar
     db.session.commit() # Salva no banco
@@ -30,5 +30,12 @@ def get_usuario(user_id):
     
     return jsonify({"error": "Usuário (a) não encontrado (a)"}), 404
     
-  
-
+@main.route('/usuario/<int:user_id>', methods=['DELETE'])
+def delete_usuario(user_id):
+    user = Usuario.query.get(user_id)
+    if user:
+        db.session.delete(user)
+        db.session.commit()
+        return jsonify({"mensagem": "Usuário (a) excluído (a) com sucesso!"}), 200
+    else:
+        return jsonify({"error": "Usuário (a) não encontrado (a)"}), 404
