@@ -1,5 +1,5 @@
 ================== 🏦 BANCO PY =================
-Bem vindo (a) ao Banco Py versão Web Interface!
+Bem vindo (a) ao Banco PY versão Web Interface!
 
 Instruções:
 1. Clone o repositório na sua máquina
