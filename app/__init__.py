@@ -19,7 +19,7 @@ def create_app():
         from .models import Usuario, Transacao
         db.create_all()
 
-# Importando as rotas
+    # Importando as rotas
 
     from .routes import main
     app.register_blueprint(main)       

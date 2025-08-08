@@ -14,35 +14,34 @@ def index():
 @main.route('/registro', methods=['POST'])
 def registro():
     dados = request.get_json()
-    if Usuario.query.filter_by(email=dados['email']).first():
+    if Usuario.query.filter_by(nome=dados['nome']).first():
         return jsonify({"erro": "User já cadastrado (a)"}), 400
-    novo_usuario = Usuario(nome=dados['nome'], email=dados['email'])
-    novo_usuario.set_senha(dados=['senha']) # senha segura
+    novo_usuario = Usuario(nome=dados['nome'], nome=dados['nome'])
+    novo_usuario.set_senha(dados['senha']) # senha segura
     db.session.add(novo_usuario)
     db.session.commit()
     return jsonify ({"msg": "User cadastrado (a) com sucesso!"}), 201
 
 @main.route('/login', methods=['POST'])
 def login():
-    dados = request.get.json()
-    usuario = Usuario.query.filter_by(email=dados['email']).first()
+    dados = request.get_json()
+    usuario = Usuario.query.filter_by(nome=dados['nome']).first()
 
     if not usuario or not usuario.checar_senha(dados['senha']):
         return jsonify({"erro": "E-mail ou senha incorretos"}), 401
     
     token = create_access_token(identity=usuario.id)
-    return jsonify({token: "token"}), 200
+    return jsonify({"token": token}), 200
 
 # protegendo a rota com JWT (middleware)
 @main.route('/perfil', methods=['GET'])
-@jwt_required
+@jwt_required()
 def perfil():
     user_id = get_jwt_identity()
     usuario = Usuario.query.get(user_id)
     return jsonify({
         'id': usuario.id,
         'nome': usuario.nome,
-        'email': usuario.email
     })
 
 

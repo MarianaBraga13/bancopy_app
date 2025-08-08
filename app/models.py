@@ -4,7 +4,8 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 class Usuario(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    nome = db.Column(db.String)
+    nome = db.Column(db.String, nullable=False)
+    senha_hash = db.Column(db.String(128), nullable=False)  # Armazena o hash da senha
     patrimonio = db.Column(db.Float, default=0.0)
     limite_cartao = db.Column(db.Float, default=0.0)
     limite_emprestimo = db.Column(db.Float, default=0.0)
