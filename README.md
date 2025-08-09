@@ -18,19 +18,20 @@ Esta release busca aproveitar o código do projeto de CLI para desenvolver uma i
 ## Histórico de versões
 
 - ✅ **v1.0**: Criação da estrutura: 1. banco de dados (SQLite), 2. conexão do banco de dados com app.py, 3. inicialização e configuração do app com __init__.py. 4. Criação de rotas para usuário. 5. CRUD com arquitetura RESTFul, 6. utilização de blueprints para registro das rotas, 7. testes das rotas com sistemas Insomnia e Postman.
-- ✅ **v2.0**: Login com JWT, hash e segurança.
+- ✅ **v2.0**: Login com segurança utilizando JWT, hash e middleware (proteção de rotas).
 
-- 👉 Próxima versão: login com JWT, hash e segurança.
+- 👉 Próxima versão: Reutilização e reestruturação do código para as transações financeiras.
 
 RESUMO DOS PRÓXIMOS PASSOS:
-*Reaproveitamento do back-end de um projeto próprio em CLI (você poderá encontrá-lo no repositório: transacoes v6.0)
-*Conectar ao Banco de Dados com SQLALchemy (SQLite)
-*Segurança da Informação e boas práticas usando JWT / hash.
-*Inserir uma interface Web, Blueprint em rotas, métodos GET, POST, DELETE (Padrão API REST)
-*Popular o Banco de Dados usando seed.py
-*Segurança da Informação dos dados do cliente com @login_admin
-*Análise de dados usando Estatística Aplicada a Ciência de Dados (pandas)
-*Análise de crédito em IA (Regressão Linear | Naive Bayes)
-*Representação com dashboards usando matplotlib
+*Reaproveitamento do back-end de um projeto próprio em CLI (você poderá encontrá-lo no repositório: transacoes v6.0);
+*Conectar ao Banco de Dados com SQLALchemy (SQLite);
+*Segurança da Informação e boas práticas usando JWT / hash e middleware para proteção de rotas;
+*Reutilizar o código para as transações financeiras;
+*Inserir uma interface Web, Blueprint em rotas, métodos GET, POST, DELETE (Padrão API REST);
+*Popular o Banco de Dados usando seed.py;
+*Segurança da Informação dos dados do cliente com @login_admin;
+*Análise de dados usando Estatística Aplicada a Ciência de Dados (pandas);
+*Análise de crédito em IA (Regressão Linear | Naive Bayes);
+*Representação com dashboards usando matplotlib: movimentações financeiras e linhas de crédito.
 
 Este sistema é a Versão 2.0.
